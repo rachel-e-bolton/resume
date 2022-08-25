@@ -9,12 +9,14 @@ const config = {
     adapter: adapter({
       pages: "docs",
       assets: "docs",
+      fallback: null
     }),
+    prerender: {
+      default: true
+    },
     paths: {
       base: dev ? "" : "/resume",
-    },
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: "#svelte",
+    }
   },
 
   preprocess: [
